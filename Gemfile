@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in simple_admin.gemspec
 gemspec
 
-gem 'rdoc'
+gem 'rails', '~> 4.2.7'
 
 gem 'carrierwave'
 gem 'devise'
 gem 'faker'
 gem 'mini_magick'
+
+gem 'rdoc'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery-tags-input'
@@ -24,7 +26,6 @@ group :test do
   gem 'pg'
 
   gem 'factory_girl_rails'
-  gem 'rails-controller-testing'
   gem 'sprockets-rails', require: 'sprockets/railtie'
 
   gem 'shoulda-matchers'

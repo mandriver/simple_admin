@@ -1,6 +1,8 @@
 module SimpleAdmin
   module Helpers
     module UrlHelper
+      include Rails.application.routes.url_helpers
+
       def resource_link(resource, method, namespace=:admin)
         singular_name = resource.class.model_name.element
         plural_name = singular_name.pluralize

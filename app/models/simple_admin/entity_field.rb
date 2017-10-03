@@ -29,7 +29,7 @@ module SimpleAdmin
     # @example SimpleAdmin::Post
     #   module SimpleAdmin
     #     class Post < Base
-    #       belongs_to :category, optional: true
+    #       belongs_to :category
     #     end
     #   end
     #

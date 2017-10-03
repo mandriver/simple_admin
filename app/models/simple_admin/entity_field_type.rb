@@ -4,7 +4,7 @@ module SimpleAdmin
 
     boolean_fields :inbuilt
 
-    belongs_to :entity_field, optional: true
+    belongs_to :entity_field
 
     validate :view_templates_presence, unless: :inbuilt?
 

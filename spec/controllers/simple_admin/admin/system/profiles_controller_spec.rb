@@ -12,7 +12,7 @@ RSpec.describe SimpleAdmin::Admin::System::ProfilesController, type: :controller
       }
     end
 
-    subject { get :edit, params: params }
+    subject { get :edit, params }
 
     it { is_expected.to have_http_status(200) }
   end
@@ -27,7 +27,7 @@ RSpec.describe SimpleAdmin::Admin::System::ProfilesController, type: :controller
       }
     end
 
-    subject { patch :update, params: params }
+    subject { patch :update, params }
 
     it 'update profile' do
       expect(subject).to redirect_to admin_root_path

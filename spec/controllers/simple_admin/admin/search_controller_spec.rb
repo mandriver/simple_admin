@@ -8,7 +8,7 @@ RSpec.describe SimpleAdmin::Admin::SearchController, type: :controller do
   describe '#index' do
     let(:params) { {} }
 
-    subject { get :index, params: params }
+    subject { get :index, params }
 
     it { expect { subject }.to raise_error(ActiveRecord::RecordNotFound) }
 

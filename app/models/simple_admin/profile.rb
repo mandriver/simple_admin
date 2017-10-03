@@ -1,6 +1,6 @@
 module SimpleAdmin
   class Profile < Base
-    belongs_to :user, optional: true
+    belongs_to :user
 
     mount_uploader :avatar, ProfileAvatarUploader
   end

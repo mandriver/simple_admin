@@ -1,5 +1,5 @@
 module SimpleAdmin
-  class Base < ApplicationRecord
+  class Base < ActiveRecord::Base
     self.abstract_class = true
     self.table_name_prefix = 'simple_admin_'
 

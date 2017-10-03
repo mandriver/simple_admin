@@ -16,13 +16,13 @@ shared_examples :controller_crud do
       }
     end
 
-    subject { get :edit, params: params }
+    subject { get :edit, params }
 
     it { is_expected.to have_http_status(200) }
   end
 
   describe '#update' do
-    subject { patch :update, params: resource_params }
+    subject { patch :update, resource_params }
 
     it 'update resource' do
       expect(subject).to redirect_to after_update_path
@@ -33,7 +33,7 @@ shared_examples :controller_crud do
   end
 
   describe '#create' do
-    subject { post :create, params: resource_params }
+    subject { post :create, resource_params }
 
     it 'create resource' do
       expect { subject }.to change { resource.class.count }.by(1)
@@ -49,7 +49,7 @@ shared_examples :controller_crud do
       }
     end
 
-    subject { delete :destroy, params: params }
+    subject { delete :destroy, params }
 
     it 'delete resource' do
       expect { subject }.to change { resource.class.count }.by(-1)
